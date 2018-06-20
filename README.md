@@ -40,7 +40,7 @@ fifa = tbl_df(fifa)
 ```
 ### 2. [Ranking](README.md)
 
-#### 2.1 [Players and Euro values ](README.md)
+#### 2.1 Players and Euro values
 ```
 fifa %>% select(name, club, eur_value) %>% arrange(desc(eur_value)) %>% head(10) %>% data.table()
 ```
@@ -66,7 +66,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ![team vs potential](https://user-images.githubusercontent.com/38479244/41644762-e6c38dc8-7423-11e8-894f-9f918e697613.jpg)
 
 
-### 3. Correlation Matrix
+### 3. [Correlation Matrix](README.md)
 ```
   numvar = which(sapply(fifa, is.numeric))
   numvar = fifa[, numvar]
@@ -79,7 +79,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ```
 ![correlation matrix](https://user-images.githubusercontent.com/38479244/41644953-7302402c-7424-11e8-98d3-a23d184f1b64.png)
 
-### 4. Distributions
+### 4. [Distributions](README.md)
 
 #### 4.1 Age
 ```
@@ -109,7 +109,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ![weight distr](https://user-images.githubusercontent.com/38479244/41645414-cdeae146-7425-11e8-8ebe-73f6ef1696e0.png)
 
 
-### 5. Data visualization: Part 1
+### 5. [Data visualization: Part 1](README.md)
 
 #### 5.1 Age vs Overall
 ```
@@ -140,7 +140,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ```
 ![club team vs value part1 vis](https://user-images.githubusercontent.com/38479244/41645892-2c1f15d8-7427-11e8-8522-5721047da697.png)
 
-### 6. Data visualization: Part 2
+### 6. [Data visualization: Part 2](README.md)
 
 #### 6.1 Nationality analysis from top 5 club teams
  ```
@@ -175,7 +175,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
  
 ![treemap](https://user-images.githubusercontent.com/38479244/41645977-734af40e-7427-11e8-9c5a-68cfc7d4d0b4.png)
 
-### 7. World map
+### 7. [World map](README.md)
 ```
   # Create a data frame that you would like to map countries for
   countries = fifa %>% select(nationality) %>% group_by(nationality) %>% summarise(count = n())
