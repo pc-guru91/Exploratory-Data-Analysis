@@ -12,8 +12,8 @@
 	- [Age](#age)
 	- [Overall](#overall)
 	- [Height (cm)](#height(cm))
-	- [Weight (kg)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-- [Data visualization: Part 1](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Weight (kg)](#weight(kg))
+- [Data visualization: Part 1](#data-visualization:-part-1)
 	- [Age vs Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 	- [Club teams vs Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 - [Data visualization: Part 2](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
@@ -66,7 +66,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ![team vs potential](https://user-images.githubusercontent.com/38479244/41644762-e6c38dc8-7423-11e8-894f-9f918e697613.jpg)
 
 
-### 3. [Correlation Matrix](README.md)
+### Correlation Matrix
 ```
   numvar = which(sapply(fifa, is.numeric))
   numvar = fifa[, numvar]
@@ -79,29 +79,29 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ```
 ![correlation matrix](https://user-images.githubusercontent.com/38479244/41644953-7302402c-7424-11e8-98d3-a23d184f1b64.png)
 
-### 4. [Distributions](README.md)
+### Distributions(README.md)
 
-#### 4.1 Age
+#### Age
 ```
   ggplot(fifa, aes(x = age))+
     geom_histogram(aes(y = ..density..), binwidth = 2, color = "dark grey", fill = "white")+
     geom_density(alpha = .2, fill = "steelblue", size = 0.9)
 ```
 ![age distr](https://user-images.githubusercontent.com/38479244/41645413-cdd04746-7425-11e8-8fa3-c3bd5dc4b3e6.png)
-#### 4.2 Overall
+#### Overall
 ```
   ggplot(fifa, aes(x = overall))+
     geom_histogram(aes(y = ..density..), binwidth = 2, color = "dark grey", fill = "white")+
     geom_density(alpha = .2, fill = "steelblue", size = 0.9)
 ```
 ![overall distr](https://user-images.githubusercontent.com/38479244/41645412-cdb5a486-7425-11e8-8394-39028dfea786.png)
-#### 4.3 Height(cm)
+#### Height(cm)
 ```
   ggplot(fifa, aes(x = height_cm))+
     geom_histogram(aes(y = ..density..), alpha=0.5, binwidth = 3, color = "dark grey", fill = "white")
 ```
 ![height distr](https://user-images.githubusercontent.com/38479244/41645410-cd983c66-7425-11e8-9c7a-349f641a32a0.png)
-#### 4.4 Weight(kg)
+#### Weight(kg)
 ```
   ggplot(fifa, aes(x = weight_kg))+
     geom_histogram(aes(y = ..density..), alpha=0.5, binwidth = 3, color = "dark grey", fill = "white")
@@ -109,9 +109,9 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ![weight distr](https://user-images.githubusercontent.com/38479244/41645414-cdeae146-7425-11e8-8ebe-73f6ef1696e0.png)
 
 
-### 5. [Data visualization: Part 1](README.md)
+### Data visualization: Part 1
 
-#### 5.1 Age vs Overall
+#### Age vs Overall
 ```
   age = fifa %>% filter(age<40)  %>% select(age, overall) %>% group_by(age) %>% 
     summarize(Overall = mean(overall))
@@ -125,7 +125,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ```
 ![age vs overall part1 vis](https://user-images.githubusercontent.com/38479244/41645893-2c3e349a-7427-11e8-8014-13d118b42a25.png)
 
-#### 5.2 Club team vs Euro value
+#### Club team vs Euro value
 ```
   club.value = fifa %>% select(club, eur_value) %>% group_by(club) %>% summarize(Value = mean(eur_value)) %>% 
     arrange(desc(Value)) %>% head(10)
@@ -140,9 +140,9 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ```
 ![club team vs value part1 vis](https://user-images.githubusercontent.com/38479244/41645892-2c1f15d8-7427-11e8-8522-5721047da697.png)
 
-### 6. [Data visualization: Part 2](README.md)
+### Data visualization: Part 2
 
-#### 6.1 Nationality analysis from top 5 club teams
+#### Nationality analysis from top 5 club teams
  ```
  Top_5 = fifa %>% select(club, eur_value, overall) %>% group_by(club) %>% 
  summarize(Value = mean(eur_value), Avg_Overall = mean(overall)) %>% 
@@ -175,7 +175,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
  
 ![treemap](https://user-images.githubusercontent.com/38479244/41645977-734af40e-7427-11e8-9c5a-68cfc7d4d0b4.png)
 
-### 7. [World map](README.md)
+### World map
 ```
   # Create a data frame that you would like to map countries for
   countries = fifa %>% select(nationality) %>% group_by(nationality) %>% summarise(count = n())
