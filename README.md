@@ -13,7 +13,7 @@
 	- [Overall](#overall)
 	- [Height (cm)](#height)
 	- [Weight (kg)](#weight)
-- [Data visualization: Part 1](#data-visualization-:part-1)
+- [Data visualization: Part 1](#data-visualization-:-part-1)
 	- [Age vs Overall rating](#age-vs-overall)
 	- [Club teams vs Euro values](#club-team-vs-euro-value)
 - [Data visualization: Part 2](#data-visualization:-part-2)
