@@ -34,7 +34,7 @@ library(rworldmap)
 library(ggmap)
 ```
 ```
-#Importing data
+# Importing data
 fifa = read.csv("fifa.csv", stringsAsFactors = FALSE)
 fifa = tbl_df(fifa)
 ```
