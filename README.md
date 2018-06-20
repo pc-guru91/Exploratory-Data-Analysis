@@ -11,11 +11,11 @@
 - [Distributions](#distributions)
 	- [Age](#age)
 	- [Overall](#overall)
-	- [Height (cm)](#height(cm))
-	- [Weight (kg)](#weight(kg))
+	- [Height (cm)](#height)
+	- [Weight (kg)](#weight)
 - [Data visualization: Part 1](#data-visualization:-part-1)
-	- [Age vs Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [Club teams vs Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Age vs Overall rating](age-vs-overall)
+	- [Club teams vs Euro values](club-team-vs-euro-value)
 - [Data visualization: Part 2](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 	- [Nationality analysis from top 5 teams](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 - [World map](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
@@ -79,7 +79,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ```
 ![correlation matrix](https://user-images.githubusercontent.com/38479244/41644953-7302402c-7424-11e8-98d3-a23d184f1b64.png)
 
-### Distributions(README.md)
+### Distributions
 
 #### Age
 ```
