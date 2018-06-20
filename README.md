@@ -14,11 +14,11 @@
 	- [Height (cm)](#height)
 	- [Weight (kg)](#weight)
 - [Data visualization: Part 1](#data-visualization:-part-1)
-	- [Age vs Overall rating](age-vs-overall)
-	- [Club teams vs Euro values](club-team-vs-euro-value)
-- [Data visualization: Part 2](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [Nationality analysis from top 5 teams](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-- [World map](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Age vs Overall rating](#age-vs-overall)
+	- [Club teams vs Euro values](#club-team-vs-euro-value)
+- [Data visualization: Part 2](#data-visualization:-part-2)
+	- [Nationality analysis from top 5 teams](#nationality-analysis-from-top-5-club-teams)
+- [World map](#world-map)
 
 ### Load data and libraries
 ``` R
