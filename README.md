@@ -11,7 +11,7 @@
 - [Distributions](#distributions)
 	- [Age](#age)
 	- [Overall](#overall)
-	- [Height (cm)](#height-(cm))
+	- [Height (cm)](#height(cm))
 	- [Weight (kg)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 - [Data visualization: Part 1](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 	- [Age vs Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
@@ -95,13 +95,13 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
     geom_density(alpha = .2, fill = "steelblue", size = 0.9)
 ```
 ![overall distr](https://user-images.githubusercontent.com/38479244/41645412-cdb5a486-7425-11e8-8394-39028dfea786.png)
-#### 4.3 Height (cm)
+#### 4.3 Height(cm)
 ```
   ggplot(fifa, aes(x = height_cm))+
     geom_histogram(aes(y = ..density..), alpha=0.5, binwidth = 3, color = "dark grey", fill = "white")
 ```
 ![height distr](https://user-images.githubusercontent.com/38479244/41645410-cd983c66-7425-11e8-9c7a-349f641a32a0.png)
-#### 4.4 Weight (kg)
+#### 4.4 Weight(kg)
 ```
   ggplot(fifa, aes(x = weight_kg))+
     geom_histogram(aes(y = ..density..), alpha=0.5, binwidth = 3, color = "dark grey", fill = "white")
