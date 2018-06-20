@@ -17,11 +17,11 @@
 	- 5.1 Age vs Overall rating
 	- 5.2 Club teams vs Euro values
 6. Data visualization: Part 2
-	- 6.1 Position analysis
+	- 6.1 Nationality analysis from top 5 teams
 7. World map
 
 ### 1. Load data and libraries
-```
+``` R
 # Importing library
 library(ggplot2)
 library(corrplot)
@@ -141,6 +141,8 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ![club team vs value part1 vis](https://user-images.githubusercontent.com/38479244/41645892-2c1f15d8-7427-11e8-8522-5721047da697.png)
 
 ### 6. Data visualization: Part 2
+
+#### 6.1 Nationality analysis from top 5 club teams
  ```
  Top_5 = fifa %>% select(club, eur_value, overall) %>% group_by(club) %>% 
  summarize(Value = mean(eur_value), Avg_Overall = mean(overall)) %>% 
