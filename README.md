@@ -1,7 +1,7 @@
 ## FIFA 2018 Data Exploration and Visualization with R
 
 ### Table of Contents
-1. [Loading dataset](#1.-load-data-and-libraries)
+1. [Loading dataset](#load-data-and-libraries)
 2. [Ranking](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 	- [2.1 Players and Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 	- [2.2 Players and Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
@@ -20,7 +20,7 @@
 	- [6.1 Nationality analysis from top 5 teams](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 7. [World map](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 
-### 1. Load data and libraries
+### Load data and libraries
 ``` R
 # Importing library
 library(ggplot2)
