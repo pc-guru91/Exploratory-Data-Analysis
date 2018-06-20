@@ -18,7 +18,7 @@
 	- [5.2 Club teams vs Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 6. [Data visualization: Part 2](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 	- [6.1 Nationality analysis from top 5 teams](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-7. [World map]
+7. [World map](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 
 ### 1. [Load data and libraries](README.md)
 ``` R
