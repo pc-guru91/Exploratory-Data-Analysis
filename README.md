@@ -109,7 +109,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ![weight distr](https://user-images.githubusercontent.com/38479244/41645414-cdeae146-7425-11e8-8ebe-73f6ef1696e0.png)
 
 
-### Data visualization:Part 1
+### Data visualization: Part 1
 
 #### Age vs Overall
 ``` R
