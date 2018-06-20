@@ -39,7 +39,7 @@ fifa = read.csv("fifa.csv", stringsAsFactors = FALSE)
 fifa = tbl_df(fifa)
 str(fifa)
 ```
-```
+``` R
 Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	17994 obs. of  89 variables:
  $ ID                      : int  20801 158023 190871 176580 167495 188545 193080 183277 182521 167664 ...
  $ name                    : chr  "Cristiano Ronaldo" "L. Messi" "Neymar" "L. SuÃ¡rez" ...
