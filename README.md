@@ -13,7 +13,7 @@
 	- [Overall](#overall)
 	- [Height (cm)](#height)
 	- [Weight (kg)](#weight)
-- [Data visualization: Part 1](#data-visualization:-part-1)
+- [Data visualization: Part 1](#data-visualization:part-1)
 	- [Age vs Overall rating](#age-vs-overall)
 	- [Club teams vs Euro values](#club-team-vs-euro-value)
 - [Data visualization: Part 2](#data-visualization:-part-2)
@@ -95,13 +95,13 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
     geom_density(alpha = .2, fill = "steelblue", size = 0.9)
 ```
 ![overall distr](https://user-images.githubusercontent.com/38479244/41645412-cdb5a486-7425-11e8-8394-39028dfea786.png)
-#### Height(cm)
+#### Height
 ```
   ggplot(fifa, aes(x = height_cm))+
     geom_histogram(aes(y = ..density..), alpha=0.5, binwidth = 3, color = "dark grey", fill = "white")
 ```
 ![height distr](https://user-images.githubusercontent.com/38479244/41645410-cd983c66-7425-11e8-9c7a-349f641a32a0.png)
-#### Weight(kg)
+#### Weight
 ```
   ggplot(fifa, aes(x = weight_kg))+
     geom_histogram(aes(y = ..density..), alpha=0.5, binwidth = 3, color = "dark grey", fill = "white")
@@ -109,7 +109,7 @@ arrange(desc(Potential)) %>% head(10) %>% data.table()
 ![weight distr](https://user-images.githubusercontent.com/38479244/41645414-cdeae146-7425-11e8-8ebe-73f6ef1696e0.png)
 
 
-### Data visualization: Part 1
+### Data visualization:Part 1
 
 #### Age vs Overall
 ```
