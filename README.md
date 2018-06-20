@@ -2,21 +2,21 @@
 
 ### Table of Contents
 - [Loading dataset](#load-data-and-libraries)
-- [Ranking](#ranking)
+- **Ranking**
 	- [Players and Euro values](#players-and-euro-values)
 	- [Players and Overall rating]([#players-and-overall-rating)
 	- [Club teams and Overall rating](#top-10-club-teams-and-overall-rating)
 	- [Club teams and Potential rating](#top-10-club-teams-and-potential-rating)
 - [Correlation matrix - Overall rating](#correlation-matrix)
-- [Distributions](#distributions)
+- **Distributions**
 	- [Age](#age)
 	- [Overall](#overall)
 	- [Height (cm)](#height)
 	- [Weight (kg)](#weight)
-- [Data visualization: Part 1](#data-visualization-:-part-1)
+- **[Data visualization: Part 1](#data-visualization-:-part-1)**
 	- [Age vs Overall rating](#age-vs-overall)
 	- [Club teams vs Euro values](#club-team-vs-euro-value)
-- [Data visualization: Part 2](#data-visualization:-part-2)
+- **[Data visualization: Part 2](#data-visualization:-part-2)**
 	- [Nationality analysis from top 5 teams](#nationality-analysis-from-top-5-club-teams)
 - [World map](#world-map)
 
