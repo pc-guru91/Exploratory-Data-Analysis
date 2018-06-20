@@ -1,26 +1,26 @@
 ## FIFA 2018 Data Exploration and Visualization with R
 
 ### Table of Contents
-1. [Loading dataset](#1.load-data-and-libraries)
-2. [Ranking](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [2.1 Players and Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [2.2 Players and Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [2.3 Club teams and Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [2.4 Club teams and Potential rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-3. [Correlation matrix - Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-4. [Distributions](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [4.1 Age](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [4.2 Overall](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [4.3 Height (cm)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [4.4 Weight (kg)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-5. [Data visualization: Part 1](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [5.1 Age vs Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [5.2 Club teams vs Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-6. [Data visualization: Part 2](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-	- [6.1 Nationality analysis from top 5 teams](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-7. [World map](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+- [Loading dataset](#load-data-and-libraries)
+- [Ranking](#ranking)
+	- [Players and Euro values](#players-and-euro-values)
+	- [Players and Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Club teams and Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Club teams and Potential rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+- [Correlation matrix - Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+- [Distributions](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Age](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Overall](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Height (cm)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Weight (kg)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+- [Data visualization: Part 1](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Age vs Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Club teams vs Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+- [Data visualization: Part 2](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [Nationality analysis from top 5 teams](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+- [World map](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
 
-### 1. Load data and libraries
+### Load data and libraries
 ``` R
 # Importing library
 library(ggplot2)
@@ -38,27 +38,27 @@ library(ggmap)
 fifa = read.csv("fifa.csv", stringsAsFactors = FALSE)
 fifa = tbl_df(fifa)
 ```
-### 2. [Ranking](README.md)
+### Ranking
 
-#### 2.1 Players and Euro values
+#### Players and Euro values
 ```
 fifa %>% select(name, club, eur_value) %>% arrange(desc(eur_value)) %>% head(10) %>% data.table()
 ```
 ![player vs value](https://user-images.githubusercontent.com/38479244/41644841-204e5492-7424-11e8-8ce0-da247113f760.jpg)
 
-#### 2.2 Players and Overall rating
+#### Players and Overall rating
 ```
 fifa %>% select(name, club, overall) %>% arrange(desc(overall)) %>% head(10) %>% data.table()
 ```
 ![player vs overall](https://user-images.githubusercontent.com/38479244/41644819-11a83912-7424-11e8-9c63-7dce9d18d1ef.jpg)
 
-#### 2.3 Top 10 club teams and Overall rating
+#### Top 10 club teams and Overall rating
 ```
 club_overall = fifa %>% select(club, league, overall) %>% group_by(club) %>% summarise(Overall = mean(overall)) %>% arrange(desc(Overall)) %>% head(10) %>% data.table()
 ```
 ![team vs overall](https://user-images.githubusercontent.com/38479244/41644820-11d6fa22-7424-11e8-8268-032e03eff4f3.jpg)
 
-#### 2.4 Top 10 club teams and Potential rating
+#### Top 10 club teams and Potential rating
 ```
 fifa %>% select(club, league, potential) %>% group_by(club) %>% summarise(Potential = mean(potential)) %>% 
 arrange(desc(Potential)) %>% head(10) %>% data.table()
