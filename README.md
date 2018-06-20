@@ -2,25 +2,25 @@
 
 ### Table of Contents
 1. [Loading dataset](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
-2. Ranking
-	- 2.1 Players and Euro values
-	- 2.2 Players and Overall rating
-	- 2.3 Club teams and Overall rating
-	- 2.4 Club teams and Potential rating
-3. Correlation matrix - Overall rating
-4. Distributions
-	- 4.1 Age
-	- 4.2 Overall
-	- 4.3 Height (cm)
-	- 4.4 Weight (kg)
-5. Data visualization: Part 1
-	- 5.1 Age vs Overall rating
-	- 5.2 Club teams vs Euro values
-6. Data visualization: Part 2
-	- 6.1 Nationality analysis from top 5 teams
-7. World map
+2. [Ranking](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [2.1 Players and Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [2.2 Players and Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [2.3 Club teams and Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [2.4 Club teams and Potential rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+3. [Correlation matrix - Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+4. [Distributions](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [4.1 Age](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [4.2 Overall](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [4.3 Height (cm)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [4.4 Weight (kg)](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+5. [Data visualization: Part 1](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [5.1 Age vs Overall rating](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [5.2 Club teams vs Euro values](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+6. [Data visualization: Part 2](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+	- [6.1 Nationality analysis from top 5 teams](https://github.com/pc-guru91/Exploratory-Data-Analysis/blob/master/README.md)
+7. [World map]
 
-### [1. Load data and libraries](README.md)
+### 1. [Load data and libraries](README.md)
 ``` R
 # Importing library
 library(ggplot2)
@@ -38,9 +38,9 @@ library(ggmap)
 fifa = read.csv("fifa.csv", stringsAsFactors = FALSE)
 fifa = tbl_df(fifa)
 ```
-### 2. Ranking
+### 2. [Ranking](README.md)
 
-#### 2.1 Players and Euro values 
+#### 2.1 [Players and Euro values ](README.md)
 ```
 fifa %>% select(name, club, eur_value) %>% arrange(desc(eur_value)) %>% head(10) %>% data.table()
 ```
